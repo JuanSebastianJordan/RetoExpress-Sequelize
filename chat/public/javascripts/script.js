@@ -6,8 +6,10 @@ ws.onmessage = (msg) => {
 };
 
 const renderMessages = (data) => {
-  const html = data.map((item) => `<p>${item}</p>`).join(" ");
-  document.getElementById("messages").innerHTML = html;
+  
+  let html='';
+		data.forEach((message)=>{ html+=`<p>${message.message}</p>`});
+		document.getElementById('messages').innerHTML = html;
 };
 
 
