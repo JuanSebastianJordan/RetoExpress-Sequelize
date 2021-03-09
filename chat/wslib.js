@@ -40,6 +40,7 @@ const wsConnection = (server) => {
   };
   
 };
+/* Functions to handle the endpoints */
 const addMessage = (message) => {
   messages.push(message.message);
   jsonMessages.push(message);

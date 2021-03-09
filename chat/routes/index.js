@@ -13,9 +13,7 @@ router.get('/', function(req, res, next) {
 router.get('/chat/api/messages', function(req, res, next){
   fs.readFile('message-data.json', (err, data) => {
     if (err) throw err;
-    //console.log('Data: '+data);
-    //let messages = JSON.parse(data);
-    //console.log('Messages: '+ messages);
+    
     res.send('Get all messages: '+ data);
 });
 });
@@ -27,7 +25,7 @@ router.get('/chat/api/messages/:id', function(req, res, next){
   fs.readFile('message-data.json', (err, data) => {
     if (err) throw err;
     let messages = JSON.parse(data);
-    //const message = data.find((c) => c.ts === req.params.id);
+    
     men = null;
     for (let i = 0; i < messages.length; i++) {
       const act = messages[i];
